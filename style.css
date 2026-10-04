@@ -1,0 +1,38 @@
+:root { color-scheme: dark; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; background: #081321; color: #f0f5fb; }
+* { box-sizing: border-box; }
+html { min-height: 100%; }
+body { margin: 0; min-height: 100vh; min-height: 100svh; padding: 52px 20px; display: grid; place-items: center; background: radial-gradient(ellipse at 15% 12%, #166aa32e, transparent 48%), radial-gradient(ellipse at 90% 88%, #7a96ba1a, transparent 45%), linear-gradient(145deg, #07111e, #112238 58%, #081321); }
+.page { width: 100%; max-width: 640px; margin-inline: auto; padding: 44px 30px 28px; text-align: center; border: 1px solid #d3e9ff20; border-radius: 30px; background: linear-gradient(150deg, #e2f2ff0d, #a2ceff03); box-shadow: 0 24px 80px #00000030; }
+.profile { margin-bottom: 32px; }
+.avatar { display: block; width: min(240px, 100%); height: 106px; margin: 0 auto 24px; border-radius: 16px; object-fit: cover; object-position: center; background: #efefef; border: 1px solid #d4e5f53d; box-shadow: 0 10px 28px #00000024; }
+.eyebrow { margin: 0 0 12px; color: #93c8ed; font-size: 11px; font-weight: 600; letter-spacing: 2.4px; line-height: 1.6; }
+h1 { margin: 0 0 16px; font-size: clamp(28px, 5.5vw, 36px); line-height: 1.15; letter-spacing: -.8px; }
+.bio { margin: 0; color: #d6e2ee; font-size: 15px; line-height: 1.9; overflow-wrap: anywhere; }
+.intro { margin: 13px 0 0; color: #a1b5ca; font-size: 14px; line-height: 1.65; }
+.telegram-card { display: block; width: 100%; overflow: hidden; border-radius: 18px; background: #eaf6ff; border: 1px solid #96dcff80; box-shadow: 0 12px 38px #009fff17; transition: transform .18s ease, box-shadow .18s ease; }
+.banner { display: block; width: 100%; height: auto; }
+.telegram-card:hover { transform: translateY(-3px); box-shadow: 0 16px 44px #009fff30; }
+.telegram-card:focus-visible { outline: 3px solid #7dd3fc; outline-offset: 6px; }
+footer { margin-top: 28px; color: #899fb5; font-size: 10px; line-height: 1.6; letter-spacing: 2px; }
+footer span { padding-inline: 8px; color: #75b1db; }
+@media (max-width: 600px) {
+  .full-page-link { padding: max(24px, env(safe-area-inset-top)) 14px max(24px, env(safe-area-inset-bottom)); }
+  .page { padding: 34px 16px 24px; border-radius: 24px; }
+  .profile { margin-bottom: 28px; }
+  .avatar { margin-bottom: 22px; }
+  .eyebrow { font-size: 10px; letter-spacing: 1.8px; }
+  .bio { font-size: 14px; }
+  .intro { font-size: 13px; }
+  .telegram-card { border-radius: 13px; }
+}
+@media (prefers-reduced-motion: reduce) { .telegram-card { transition: none; } }
+
+.profile-link { display: block; width: fit-content; max-width: 100%; margin: 0 auto; border-radius: 16px; }
+.profile-link .avatar { margin-bottom: 0; }
+.profile-link { margin-bottom: 24px; }
+.profile-link:focus-visible { outline: 3px solid #7dd3fc; outline-offset: 5px; }
+
+body { display: block; padding: 0; }
+.full-page-link { display: grid; place-items: center; width: 100%; min-height: 100vh; min-height: 100svh; padding: 52px 20px; color: inherit; text-decoration: none; cursor: pointer; }
+.full-page-link:focus-visible .page { outline: 3px solid #7dd3fc; outline-offset: 5px; }
+@media (max-width: 600px) { .full-page-link { padding: max(24px, env(safe-area-inset-top)) 14px max(24px, env(safe-area-inset-bottom)); } }
